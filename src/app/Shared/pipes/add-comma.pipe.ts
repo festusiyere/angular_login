@@ -8,5 +8,4 @@ export class AddCommaPipe implements PipeTransform {
   transform(value: number): string {
     return value.toLocaleString();
   }
-
 }

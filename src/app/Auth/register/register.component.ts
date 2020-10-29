@@ -16,8 +16,7 @@ export class RegisterComponent implements OnInit {
   form: FormGroup;
   isUsed: string = null;
 
-  constructor(private fb: FormBuilder, private authService: AuthService, private router: Router,
-, private data: DataService, private http: HttpClient) { }
+  constructor(private fb: FormBuilder, private authService: AuthService, private router: Router, private data: DataService, private http: HttpClient) { }
 
   ngOnInit(): void {
     if (this.authService.isLoggedIn()) {
@@ -30,7 +29,14 @@ export class RegisterComponent implements OnInit {
   createForm(): void {
     this.form = this.fb.group({
       name: ['', [Validators.required]],
-      email: ['', [Validators.required, Validators.email], MyValidators.UsernameValidator(this.http)],
+      f_name: ['', [Validators.required]],
+      l_name: ['', [Validators.required]],
+      phone_no: ['', [Validators.required]],
+      username: ['', [Validators.required]],
+      dob: ['', [Validators.required]],
+      state: ['', [Validators.required]],
+      country: ['', [Validators.required]],
+      email: ['', [Validators.required, Validators.email]],
       password: ['', [Validators.required, Validators.minLength(8)]],
       password_confirmation: ['', Validators.required],
     }, {

@@ -7,15 +7,10 @@ import { RouterModule } from '@angular/router';
 import { NavbarComponent } from './navbar/navbar.component';
 import { TopBarComponent } from './top-bar/top-bar.component';
 
-import { AddCommaPipe } from './pipes/add-comma.pipe';
-
-
 @NgModule({
   declarations: [
-    AddCommaPipe,
     TopBarComponent,
     NavbarComponent,
-    DetailsDirective,
   ],
   imports: [
     CommonModule,

@@ -4,24 +4,85 @@
   </div>
   <form [formGroup]="form" (ngSubmit)="onSubmit()">
     <div class="field">
-      <label class="label" for="name">Name</label>
+      <label class="label" for="name">First Name</label>
       <div class="control">
         <input
-          formControlName="name"
-          id="name"
-          type="name"
+          formControlName="f_name"
+          id="f_name"
+          type="text"
           autocomplete="on"
           class="input"
-          placeholder="Name"
+          placeholder="First Name"
         />
       </div>
       <p
         class="help"
-        *ngIf="form.get('name').touched && !form.get('name').valid"
+        *ngIf="form.get('f_name').touched && !form.get('f_name').valid"
       >
-        Please enter a your name
+        Please enter a your First Name
       </p>
     </div>
+
+    <div class="field">
+      <label class="label" for="name">Last Name</label>
+      <div class="control">
+        <input
+          formControlName="l_name"
+          id="l_name"
+          type="text"
+          autocomplete="on"
+          class="input"
+          placeholder="Last Name"
+        />
+      </div>
+      <p
+        class="help"
+        *ngIf="form.get('l_name').touched && !form.get('l_name').valid"
+      >
+        Please enter a your Last Name
+      </p>
+    </div>
+
+    <div class="field">
+      <label class="label" for="name">Username</label>
+      <div class="control">
+        <input
+          formControlName="username"
+          id="username"
+          type="text"
+          autocomplete="on"
+          class="input"
+          placeholder="Username"
+        />
+      </div>
+      <p
+        class="help"
+        *ngIf="form.get('username').touched && !form.get('username').valid"
+      >
+        Please enter a your Username
+      </p>
+    </div>
+
+    <div class="field">
+      <label class="label" for="name">Phone</label>
+      <div class="control">
+        <input
+          formControlName="phone_no"
+          id="phone_no"
+          type="text"
+          autocomplete="on"
+          class="input"
+          placeholder="Phone Number"
+        />
+      </div>
+      <p
+        class="help"
+        *ngIf="form.get('phone_no').touched && !form.get('phone_no').valid"
+      >
+        Please enter a your Phone Number
+      </p>
+    </div>
+
 
     <div class="field">
       <label class="label" for="email">Email Address</label>
@@ -101,10 +162,89 @@
         Password does not match
       </p>
     </div>
-    <!-- <button type="submit" class="button but" [disabled]="!form.valid">
-      SIGNUP
-    </button> -->
-    <button type="submit" class="button but">
+
+    <div class="field">
+      <label class="label" for="name">Username</label>
+      <div class="control">
+        <input
+          formControlName="username"
+          id="username"
+          type="text"
+          autocomplete="on"
+          class="input"
+          placeholder="Username"
+        />
+      </div>
+      <p
+        class="help"
+        *ngIf="form.get('username').touched && !form.get('username').valid"
+      >
+        Please enter a your Username
+      </p>
+    </div>
+
+    <div class="field">
+      <label class="label" for="name">Date of Birth</label>
+      <div class="control">
+        <input
+          formControlName="dob"
+          id="dob"
+          type="date"
+          autocomplete="on"
+          class="input"
+          placeholder="Date of Birth"
+        />
+      </div>
+      <p
+        class="help"
+        *ngIf="form.get('dob').touched && !form.get('dob').valid"
+      >
+        Please enter a your Date of Birth
+      </p>
+    </div>
+
+    <div class="field">
+      <label class="label" for="name">State</label>
+      <div class="control">
+        <input
+          formControlName="state"
+          id="state"
+          type="text"
+          autocomplete="on"
+          class="input"
+          placeholder="State"
+        />
+      </div>
+      <p
+        class="help"
+        *ngIf="form.get('state').touched && !form.get('state').valid"
+      >
+        Please enter a your State
+      </p>
+    </div>
+
+    <div class="field">
+      <label class="label" for="name">Country</label>
+      <div class="control">
+        <input
+          formControlName="country"
+          id="country"
+          type="text"
+          autocomplete="on"
+          class="input"
+          placeholder="Country"
+        />
+      </div>
+      <p
+        class="help"
+        *ngIf="form.get('country').touched && !form.get('country').valid"
+      >
+        Please enter a your Country
+      </p>
+    </div>
+
+
+    <button type="submit" class="button but" [disabled]="!form.valid">
       SIGNUP
     </button>
     <div class="small-container">
